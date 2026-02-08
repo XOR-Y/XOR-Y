@@ -1,14 +1,23 @@
-<svg width="200" height="50" xmlns="http://www.w3.org/2000/svg">
+<svg width="400" height="100" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
   <style>
-    @keyframes move {
-      0% { content: "( ^_^ )"; }
-      50% { content: "( >_< )"; }
-      100% { content: "( ^_^ )"; }
+    .text {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 35px;
+      fill: #00d2ff;
+      font-weight: bold;
+    }
+    @keyframes typing {
+      0%, 100% { content: "( ^_^ )"; }
+      25% { content: "( >_< )"; }
+      50% { content: "( @.@ )"; }
+      75% { content: "( o_O )"; }
     }
     .emoji::after {
       content: "( ^_^ )";
-      animation: move 2s infinite;
+      animation: typing 4s infinite step-end;
     }
   </style>
-  <text x="10" y="35" font-family="Arial" font-size="24" fill="#00d2ff" class="emoji"></text>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="text">
+    <tspan class="emoji"></tspan>
+  </text>
 </svg>
